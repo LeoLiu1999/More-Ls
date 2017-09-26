@@ -55,6 +55,8 @@ def make_dict_from_csv(csv_in="occupations.csv"):
 	return csv_dict
 
 
+'''
 job_dict = make_dict_from_csv('occupations.csv')
 print(job_dict)
 print(random_job(job_dict))
+'''
