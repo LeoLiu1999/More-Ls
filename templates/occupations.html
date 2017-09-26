@@ -4,6 +4,20 @@
 		<title> Occupations! </title>
 	</head>
 	<body>
-		
+		<table border=2>
+			<tr>
+				<td><b>Occupation Name</b></td>
+				<td><b>Percentage</b></td>
+				<td><b>Important Info</b></td>
+			</tr>
+			{% for occupation in job_dict %}
+			<tr>
+				<td>{{occupation}}</td>
+				<td align="center">{{job_dict[occupation]}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+		<br>
+		Randomly selected job: <b> {{random_job}} </b>
 	</body>
 </html>
