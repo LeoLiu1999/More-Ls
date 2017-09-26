@@ -30,7 +30,7 @@ def random_job(jobdict):
         else:
             random_counter -= job_percentage
 
-def make_dict_from_csv(csv_in):
+def make_dict_from_csv(csv_in="occupations.csv"):
 	'''
 	Read in csv and generate a dictionary from it.
 
