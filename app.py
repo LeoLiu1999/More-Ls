@@ -1,5 +1,5 @@
 from flask import Flask,render_template
-import util.occupation
+import util.occupation as jobs
 
 app = Flask(__name__)
 
@@ -9,9 +9,9 @@ def landing():
 
 @app.route("/occupations")
 def occupation_temp():
-	csv = occupation.make_dict_from_csv()
-	random_job = occupation.random_job(csv)
-	return render_template(occupation.html,job_dict=csv,random_job=random_job)
+	csv = jobs.make_dict_from_csv('occupations.csv')
+	random_job = jobs.random_job(csv)
+	return render_template('occupation.html',job_dict=csv,random_job=random_job)
 
 if __name__ == "__main__":
 	app.debug = True
