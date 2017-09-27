@@ -3,10 +3,12 @@ import util.occupation as jobs
 
 app = Flask(__name__)
 
+#This is the landing page
 @app.route("/")
 def landing():
-	return 'Hi there, go to <a href="localhost:5000/occupations"> occupations </a>'
+	return 'Hi there, go to <a href="http://localhost:5000/occupations"> occupations </a>'
 
+#This is the actual page
 @app.route("/occupations")
 def occupation_temp():
 	csv = jobs.make_dict_from_csv('occupations.csv')
