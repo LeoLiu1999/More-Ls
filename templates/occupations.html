@@ -8,13 +8,14 @@
 			<tr>
 				<th>Occupation Name</th>
 				<th>Percentage</th>
-				<th>Further Info</th>
+				<th>Bureau of Labor Statistics</th>
 			</tr>
 			{% for occupation in job_dict %}
 			<tr>
 				<td>{{occupation}}</td>
 				<td align="center">{{job_dict[occupation]}}</td>
-				<td><a href="https://www.google.com/search?q={{occupation}}">stuff</a></td>
+				{% set occupation_without_comma = occupation.replace(",", "").replace(" ","-") %}
+				<td><a href="https://www.bls.gov/ooh/{{ occupation_without_comma }}">Further info for {{occupation}}</a></td>
 			</tr>
 			{% endfor %}
 		</table>
