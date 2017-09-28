@@ -17,7 +17,7 @@ def landing():
 #This is the actual page
 @app.route("/occupations")
 def occupation_temp():
-	csv = jobs.make_dict_from_csv('occupations.csv')
+	csv = jobs.make_dict_from_csv('data/occupations.csv')
 	random_job = jobs.random_job(csv)
 	return render_template('occupations.html',job_dict=csv,random_job=random_job)
 
