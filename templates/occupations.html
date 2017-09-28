@@ -8,13 +8,13 @@
 			<tr>
 				<th>Occupation Name</th>
 				<th>Percentage</th>
-				<td>Further Info</th>
+				<th>Further Info</th>
 			</tr>
 			{% for occupation in job_dict %}
 			<tr>
 				<td>{{occupation}}</td>
 				<td align="center">{{job_dict[occupation]}}</td>
-				<td>https://www.google.com/search?q={{occupation}}<td>
+				<td><a href="https://www.google.com/search?q={{occupation}}">stuff</a></td>
 			</tr>
 			{% endfor %}
 		</table>
