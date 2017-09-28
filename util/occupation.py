@@ -54,9 +54,7 @@ def make_dict_from_csv(csv_in="occupations.csv"):
 	del csv_dict['Total']
 	return csv_dict
 
-
-'''
-job_dict = make_dict_from_csv('occupations.csv')
-print(job_dict)
-print(random_job(job_dict))
-'''
+if __name__ == "__main__":
+    job_dict = make_dict_from_csv('occupations.csv')
+    print(job_dict)
+    print(random_job(job_dict))
